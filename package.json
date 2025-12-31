@@ -6,6 +6,7 @@
     "client:dev": "webpack --mode development",
     "client:serve": "webpack serve --mode development",
     "client:prod": "webpack --mode production",
+    "test": "jest",
     "jest:test": "jest",
     "jest:ui": "majestic",
     "prepare": "husky"

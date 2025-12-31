@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import { darkTheme } from '@/utils/muiTheme';
 import { MastraClient } from '@mastra/client-js';
 import { isWeatherQuery, isCodeQuery } from '@/utils/mcp'; // 引入查询分类器函数
+import robotImage from '@assets/images/robot.png'; // 导入机器人头像
 
 // const baseUrl = 'https://harlan-mcp-production.harlanhai7023.workers.dev';
 const baseUrl = 'https://my-mastra-app-production.harlanhai7023.workers.dev'; // 生产环境
@@ -167,7 +168,7 @@ const McpComponent: React.FC = () => {
                 {messages.map((message) => (
                   <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div className="flex items-start max-w-3xl">
-                      {message.sender === 'MCP' && <Avatar className="mt-1 mr-2 bg-green-600 text-sm">AG</Avatar>}
+                      {message.sender === 'MCP' && <Avatar className="mt-1 mr-2 text-sm" src={robotImage} />}
                       <Paper
                         elevation={1}
                         className={`p-3 rounded-2xl ${message.sender === 'user' ? 'bg-green-700 text-white' : 'bg-gray-700 text-gray-100'}`}

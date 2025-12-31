@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme } from '@/utils/muiTheme';
 
-// import ChatGPTComponent from './components/ChatGPTComp';
 import McpComponent from '@components/McpComp';
 
 function App() {
